@@ -110,6 +110,30 @@ try {
             require_once __DIR__ . '/pedidos.php';
             break;
             
+        case 'orcamentos':
+            require_once __DIR__ . '/orcamentos.php';
+            break;
+            
+        case 'agendamentos':
+            require_once __DIR__ . '/agendamentos.php';
+            break;
+            
+        case 'vendas':
+            require_once __DIR__ . '/vendas.php';
+            break;
+            
+        case 'cobrancas':
+            require_once __DIR__ . '/cobrancas.php';
+            break;
+            
+        case 'whatsapp':
+            require_once __DIR__ . '/whatsapp.php';
+            break;
+            
+        case 'ia':
+            require_once __DIR__ . '/ia.php';
+            break;
+            
         case 'utils':
             require_once __DIR__ . '/utils.php';
             break;
