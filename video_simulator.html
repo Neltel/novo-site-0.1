@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulador de Vídeo de Cartas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #222;
+            color: white;
+        }
+        .card-area {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 50px;
+        }
+        .card {
+            width: 150px;
+            height: 220px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: black;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .left-card {
+            border: 3px solid #4fc3f7;
+        }
+        .right-card {
+            border: 3px solid #166088;
+        }
+        .controls {
+            margin-top: 30px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador de Jogo de Cartas</h1>
+    
+    <div class="card-area">
+        <div class="card left-card" id="leftCard">
+            <div class="card-value">A</div>
+            <div class="card-suit">♥</div>
+        </div>
+        <div class="card right-card" id="rightCard">
+            <div class="card-value">K</div>
+            <div class="card-suit">♠</div>
+        </div>
+    </div>
+    
+    <div class="controls">
+        <button onclick="changeCards()">Mudar Cartas</button>
+    </div>
+
+    <script>
+        const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+        const suits = ['♥', '♦', '♣', '♠'];
+        const colors = {
+            '♥': 'red',
+            '♦': 'red',
+            '♣': 'black',
+            '♠': 'black'
+        };
+
+        function changeCards() {
+            // Gera cartas aleatórias
+            const leftValue = values[Math.floor(Math.random() * values.length)];
+            const leftSuit = suits[Math.floor(Math.random() * suits.length)];
+            
+            const rightValue = values[Math.floor(Math.random() * values.length)];
+            const rightSuit = suits[Math.floor(Math.random() * suits.length)];
+            
+            // Atualiza a exibição
+            document.getElementById('leftCard').innerHTML = `
+                <div class="card-value">${leftValue}</div>
+                <div class="card-suit" style="color: ${colors[leftSuit]}">${leftSuit}</div>
+            `;
+            
+            document.getElementById('rightCard').innerHTML = `
+                <div class="card-value">${rightValue}</div>
+                <div class="card-suit" style="color: ${colors[rightSuit]}">${rightSuit}</div>
+            `;
+        }
+
+        // Muda as cartas a cada 5 segundos automaticamente
+        setInterval(changeCards, 5000);
+    </script>
+</body>
+</html>

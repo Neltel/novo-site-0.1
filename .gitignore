@@ -1,0 +1,47 @@
+# Environment and configuration files
+.env
+*.env
+config/google-vision-credentials.json
+
+# Dependencies
+/vendor/
+node_modules/
+composer.lock
+
+# Build artifacts
+/dist/
+/build/
+*.zip
+
+# Uploads and storage
+/public/uploads/*
+!/public/uploads/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+/storage/screenshots/*
+!/storage/screenshots/.gitkeep
+/storage/calibration/*
+!/storage/calibration/.gitkeep
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+/tmp/
+*.tmp
+*.log
+
+# Existing files we don't want to commit
+files*.zip
+"todo o site"
+"passo a passo para instalaЗ╞o"
