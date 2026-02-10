@@ -1,0 +1,32 @@
+/projeto/
+│
+├── /config/
+│   └── google-vision-credentials.json  # Arquivo de credenciais do Google Cloud
+│
+├── /includes/
+│   ├── database.php            # Conexão com banco de dados
+│   ├── ocr-processor.php       # Processamento OCR das cartas
+│   ├── ai-engine.php           # Motor de IA e aprendizado
+│   ├── helpers.php             # Funções auxiliares
+│   └── capture-system.php      # Sistema de captura de tela
+│
+├── /storage/
+│   ├── /screenshots/           # Capturas de tela do vídeo
+│   ├── /calibration/           # Dados de calibração
+│   └── /logs/                  # Logs do sistema
+│
+├── /assets/
+│   ├── /css/                   # Folhas de estilo
+│   ├── /js/                    # JavaScript
+│   └── /images/                # Imagens do site
+│
+├── /admin/
+│   ├── dashboard.php           # Painel administrativo
+│   ├── calibrate.php           # Ferramenta de calibração
+│   └── settings.php            # Configurações do sistema
+│
+├── index.php                   # Página principal
+├── process.php                 # Processamento em tempo real
+├── api.php                     # Endpoints da API
+├── mestre.php                  # Arquivo mestre de configurações
+└── composer.json               # Dependências do projeto

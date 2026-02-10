@@ -1,0 +1,19 @@
+{
+    "name": "neltel/card-analysis-system",
+    "description": "Sistema de análise de cartas com OCR e IA",
+    "require": {
+        "php": ">=7.4",
+        "google/cloud-vision": "^1.5",
+        "ext-gd": "*",
+        "ext-pdo": "*",
+        "monolog/monolog": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "CardAnalysisSystem\\": "src/"
+        }
+    },
+    "config": {
+        "platform-check": false
+    }
+}
