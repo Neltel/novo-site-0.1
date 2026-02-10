@@ -138,6 +138,26 @@ try {
             require_once __DIR__ . '/utils.php';
             break;
             
+        case 'garantias':
+            require_once __DIR__ . '/garantias.php';
+            break;
+            
+        case 'preventivas':
+            require_once __DIR__ . '/preventivas.php';
+            break;
+            
+        case 'relatorios':
+            require_once __DIR__ . '/relatorios.php';
+            break;
+            
+        case 'financeiro':
+            require_once __DIR__ . '/financeiro.php';
+            break;
+            
+        case 'pmp':
+            require_once __DIR__ . '/pmp.php';
+            break;
+            
         default:
             sendError('Endpoint não encontrado', 404);
             break;
